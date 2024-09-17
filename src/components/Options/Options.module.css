@@ -1,0 +1,14 @@
+.wrap {
+    margin-top: 16px;
+    display: flex;
+    flex-direction: row;
+    gap: 5px;
+}
+
+.wrap button {
+    padding: 3px;
+    font-family: "Montserrat", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+}
