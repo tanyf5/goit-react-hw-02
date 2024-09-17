@@ -24,6 +24,8 @@ export default function App() {
 
   const totalFeedback = reviews.good + reviews.neutral + reviews.bad;
 
+  const positive = Math.round((reviews.good / totalFeedback) * 100);
+
   const updateFeedback = feedbackType => {
     setReviews({
       ...reviews,
@@ -48,7 +50,7 @@ export default function App() {
         totalFeedback={totalFeedback}
       />
       {totalFeedback > 0 ? (
-        <Feedback reviews={reviews} totalFeedback={totalFeedback}></Feedback>
+        <Feedback reviews={reviews} totalFeedback={totalFeedback} positive={positive}></Feedback>
       ) : (
         <Notification />
       )}
